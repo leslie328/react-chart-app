@@ -22,7 +22,7 @@ const ChartComponent = ({ type, data, options }) => {
             chartInstance.current.update();
           }
           return () => {if (chartInstance.current) {
-            chartInstance.current.fail();
+            chartInstance.current.destroy();
           }
         };
 

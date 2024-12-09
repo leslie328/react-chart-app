@@ -34,4 +34,29 @@ const App = () => {
 })
 .then((data) => {
   setChartData(data); // Store the data in the state
-})
+});
+
+if (loading) {
+  return <div>Loading data...</div>; // Show loading message while data is being fetched
+}
+
+return (
+  <div>
+    <h1>Charts Dashboard</h1>
+    
+    <h2>Monthly Sales</h2>
+    <BarChart data={chartData.sales} />
+    
+    <h2>Monthly Profts</h2>
+    <LineChart data={chartData.profits} />
+    
+    <h2>Expenses vs Profits</h2>
+    <ScatterChart data={chartData.expenses} />
+    
+    <h2>Sales, Profits, and Expenses</h2>
+    <BubbleChart data={chartData.bubbleData} />
+  </div>
+);
+};
+
+export default App;

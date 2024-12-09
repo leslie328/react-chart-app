@@ -11,4 +11,8 @@ function App() {
 }
 
 export default App;
+import React from 'react';
+import BarChart from './BarChart';
 import LineChart from './LineChart';
+import ScatterChart from './ScatterChart';
+import BubbleChart from './BubbleChart'
